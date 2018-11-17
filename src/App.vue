@@ -1,51 +1,32 @@
 <template>
-  <div id="container">
-    <div class="header"></div>
-    <div class="main">
-      <input type="text" v-model="counter">
-      {{ counter }}
-      <button @click="add">add</button>
 
-      <input type="text" v-model="query">
-      <button @click="search">search</button>
+  <div class="container">
+    <router-view></router-view>
+
+    <div class="search">
+      <router-view name="search"></router-view>
+      <router-view name="result"></router-view>
     </div>
-    <div class="footer"></div>
   </div>
+
 </template>
 
 <script>
-import $ from './assets/libs/util';
 
 export default {
   data: function () {
     return {
-      counter: 0,
-      query: ''
     }
   },
   methods: {
-    add: function () {
-      this.counter ++;
-    },
-    search: function () {
-      console.log(this.query);
-
-      $.ajax.get('event?query=' + this.query)
-      .then(function (response) {
-        console.log(response);
-      })
-
-
-    }
+    
   }
 }
 </script>
 
-<style>
-  @import "./assets/style/index.css";
-
-  .container{
-    
-  }
-
+<style scoped>
+.search{
+  display: flex;
+  flex-direction: column;
+}
 </style>

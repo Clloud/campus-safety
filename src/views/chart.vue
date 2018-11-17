@@ -1,12 +1,12 @@
 <template>
-    <div>
-
-    </div>
+  <div>
+    chart
+  </div>
 </template>
 
 <script>
 export default {
-  
+
 }
 </script>
 

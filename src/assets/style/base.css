@@ -1,4 +1,10 @@
-body, html{
+html, body {
+  height: 100%;
   line-height: 1;
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
 }
+
+  .container{
+    height: 100%;
+    display: flex;
+  }
