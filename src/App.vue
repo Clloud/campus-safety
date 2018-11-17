@@ -1,23 +1,51 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
+  <div id="container">
+    <div class="header"></div>
+    <div class="main">
+      <input type="text" v-model="counter">
+      {{ counter }}
+      <button @click="add">add</button>
+
+      <input type="text" v-model="query">
+      <button @click="search">search</button>
+    </div>
+    <div class="footer"></div>
   </div>
 </template>
 
 <script>
+import $ from './assets/libs/util';
+
 export default {
-  name: 'App'
+  data: function () {
+    return {
+      counter: 0,
+      query: ''
+    }
+  },
+  methods: {
+    add: function () {
+      this.counter ++;
+    },
+    search: function () {
+      console.log(this.query);
+
+      $.ajax.get('event?query=' + this.query)
+      .then(function (response) {
+        console.log(response);
+      })
+
+
+    }
+  }
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  @import "./assets/style/index.css";
+
+  .container{
+    
+  }
+
 </style>
