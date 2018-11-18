@@ -7,6 +7,8 @@
       <router-view name="search"></router-view>
       <router-view name="result"></router-view>
     </div>
+
+    <router-view name="event"></router-view>
   </div>
 
 </template>

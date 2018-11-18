@@ -3,6 +3,7 @@
     <div class="events">
       <div v-for="event in events" 
         :key="event.id" 
+        @click="toEvent(event.id)"
         class="event">
         <div class="event-header">
           <div class="event-header-title">{{ event.title }}</div>
@@ -35,7 +36,9 @@ export default {
     }
   },
   methods: {
-
+    toEvent: function (id) {
+      this.$router.push('/event/' + id);
+    }
   },
   mounted: function () {
     this.$store.dispatch('getEvents');
@@ -53,6 +56,7 @@ export default {
 }
 
 .event{
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   width: 750px;

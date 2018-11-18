@@ -27,7 +27,7 @@ const store = new Vuex.Store({
             context.commit('setEvents', response)
           })
       }
-    }
+    },
   }
 });
 

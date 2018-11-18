@@ -1,5 +1,11 @@
 <template>
   <div class="search-container">
+    <div class="nav">
+      <div class="item green">Campus Safety Map</div>
+      <div class="item">Register</div>
+      <div class="item">Login</div>
+    </div>
+
     <div class="search-box">
       <input class="search-box-input" type="text" v-model="query">
       <img class="search-box-icon" 
@@ -66,6 +72,24 @@ export default {
 </script>
 
 <style scoped>
+.nav{
+  position: fixed;
+  right: 30px;
+  top: 20px;
+  display: flex;
+  font-size: 18px;
+}
+
+.nav .item{
+  cursor:pointer;
+  padding: 10px;
+}
+
+.green{
+  color: rgb(12, 132, 132);
+  font-weight: bold;
+}
+
 .search-container{
   width: 100%;
   margin: 45px 60px;
@@ -75,7 +99,7 @@ export default {
 .search-box{
   display: flex;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 
   padding: 10px;
   height: 42px;

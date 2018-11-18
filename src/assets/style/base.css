@@ -6,5 +6,11 @@ html, body {
 
   .container{
     height: 100%;
+    width: 100%;
     display: flex;
+  }
+
+  a, a:hover, a:hover, a:visited{
+    text-decoration: none;
+    color: #000;
   }

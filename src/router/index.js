@@ -5,6 +5,7 @@ import Search from '@/views/search'
 import List from '@/views/list'
 import Chart from '@/views/chart'
 import Map from '@/views/map'
+import Event from '@/views/event'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
         'search': Search,
         'result': Map
       }
-    },
+    }, 
+    {
+      path: '/event/:id',
+      name: 'event',
+      component: Event
+    }
   ]
 })

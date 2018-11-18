@@ -31,9 +31,6 @@ module.exports = {
       ? config.build.assetsPublicPath
       : config.dev.assetsPublicPath
   },
-  // externals: {
-  //   'AMap': 'window.AMap'
-  // },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
